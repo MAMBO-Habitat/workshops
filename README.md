@@ -2,16 +2,13 @@
 
 Workshop material and other support material for the workshops
 
-* Tutorial notebooks that demo the approaches and reuse the code in other repositories
-* Notes and scripts for configuring [WebODM](github.com/OpenDroneMap/WebODM) / OpenDroneMap for use in a tutorial
+* Tutorial [notebooks](notebooks) that demo the approaches and reuse the code in other repositories
+* Slides [slides](slides)
 
 
 # MAMBO WP4 - workshops
 
 This repository holds workshop material that covers machine learning methods for analysing drone images in complement with other data sources.
-
-> [!WARNING]
-> These are early drafts based on previously existing material. The "live" versions currently in Google Colab have a lot of improvements. Please contact the maintainers or check back in November 2025.
 
 ## Contents 
 
