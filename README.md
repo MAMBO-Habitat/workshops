@@ -17,9 +17,9 @@ This repository holds workshop material that covers machine learning methods for
 
 Current contents:
 
-* Preparing data for training
-* Training a model and assessing its quality
-* Using the model to make predictions about where shrubs are
+* Preparing data for training - [try on Colab](https://colab.research.google.com/drive/1Jw6aOe1ulKMfaSIUqwGEbnCwyzUSM9lv?usp=sharing)
+* Training a model and assessing its quality [try on Colab](https://colab.research.google.com/drive/1FZEvjp5--BEk2Gmr29rnyDK5VmPgQslM?usp=sharing)
+* Using the model to make predictions about where shrubs are [try on Colab](https://colab.research.google.com/drive/1PEJNda63960oLgcxx07EPQIpweB3bYmI?usp=sharing)
 
 We supply data for use during the workshops, but aim for participants to be able to reproduce the results on their own data. All the functions defined in notebooks are also available in installable python packages, for use in pipelines.
 
