@@ -3,12 +3,8 @@ import logging
 
 
 class WebODMAPI:
-    # These permission groups are Django identifiers for WebODM permission types
-    # They're not properly documented. I learned the IDs by
-    # * manually editing one user to add the permissions I'd like
-    # * learning that user's numeric ID by looking at the URL in the admin UI
-    # * making an API query for that user ID (see get_user method) to read the list
-    permission_groups = [33, 34, 35, 36, 37, 38, 39, 40, 49, 50, 51, 52, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]
+    # The permission groups are Django identifiers for WebODM permission types
+    # The right permissions are already available in the Default group
 
     def __init__(self, baseurl: str = "http://localhost:8000"):
         self.baseurl = baseurl
@@ -33,7 +29,7 @@ class WebODMAPI:
         Returns a dict that looks like this
         {"token":"eyJ0eXAiO..."}
         """
-        params = {"username": username, "password": password}
+        params = {"username": username, "password": password, "groups":[1]}
         try:
             response = requests.post(self.baseurl + "/api/token-auth/", json=params)
         except Exception as err:
@@ -49,13 +45,11 @@ class WebODMAPI:
         return token
 
     def create_user(
-        self, username: str, password: str, groups: list = [], permissions: list = []
+        self, username: str, password: str, groups: list = [1], permissions: list = []
     ):
         """Creates a new WebODM user with the name passed in
         /api/admin/users/{id}/
         """
-        if not len(permissions):
-            permissions = self.permission_groups
 
         params = {
             "username": username,
